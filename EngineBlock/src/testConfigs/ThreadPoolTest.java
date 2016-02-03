@@ -1,4 +1,6 @@
-package threads;
+package testConfigs;
+
+import threads.ThreadPool;
 
 public class ThreadPoolTest {
 	public static void main(String[] args){
