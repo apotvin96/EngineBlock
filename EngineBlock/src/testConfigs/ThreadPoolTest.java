@@ -2,6 +2,8 @@ package testConfigs;
 
 import threads.ThreadPool;
 
+//ThreadPoolTest
+
 public class ThreadPoolTest {
 	public static void main(String[] args){
 		if (args.length != 2){
