@@ -2,7 +2,6 @@ package testConfigs;
 
 import java.awt.*;
 import javax.swing.JFrame;
-
 import screenManagement.SimpleScreenManager;
 
 @SuppressWarnings("serial")
@@ -25,7 +24,7 @@ public class FullScreenTest extends JFrame {
 	private static final long DEMO_TIME = 5000;
 	
 	public void run(DisplayMode displayMode){
-		setBackground(Color.blue);
+		setBackground(Color.black);
 		setForeground(Color.white);
 		setFont(new Font("Dialog", Font.PLAIN, 24));
 		
@@ -44,6 +43,10 @@ public class FullScreenTest extends JFrame {
 	}
 	
 	public void paint (Graphics g){
+		if (g instanceof Graphics2D){
+			Graphics2D g2 = (Graphics2D)g;
+			g2.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
+		}
 		g.drawString("Hello World", 20, 50);
 	}
 	
