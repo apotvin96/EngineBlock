@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 
 import screenManagement.SimpleScreenManager;
 
+@SuppressWarnings("serial")
 public class ImageTest extends JFrame{
 	
 	public static void main(String[] args){
@@ -62,7 +63,7 @@ public class ImageTest extends JFrame{
 		opaqueImage = loadImage("images/opaque.png");
 		transparentImage = loadImage("images/transparent.png");
 		translucentImage = loadImage("images/antialiased.png");
-		antiAliasedImage = loadImage("imafes.antialiased.png");
+		antiAliasedImage = loadImage("images/antialiased.png");
 		imagesLoaded = true;
 		repaint();
 	}
