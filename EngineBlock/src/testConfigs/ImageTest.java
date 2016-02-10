@@ -6,6 +6,9 @@ import javax.swing.JFrame;
 
 import screenManagement.SimpleScreenManager;
 
+
+
+
 @SuppressWarnings("serial")
 public class ImageTest extends JFrame{
 	
