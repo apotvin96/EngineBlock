@@ -71,6 +71,21 @@ public class ScreenManager {
 		}
 		frame.createBufferStrategy(2);
 	}
+	
+	public void setWindowed(DisplayMode displayMode){
+		JFrame frame = new JFrame();
+		frame.setUndecorated(false);
+		frame.setIgnoreRepaint(true);
+		frame.setResizable(false);
+		
+		if (displayMode != null && device.isDisplayChangeSupported()){
+			try{
+				device.setDisplayMode(displayMode);
+			}
+			catch (IllegalArgumentException ex){}	
+		}
+		frame.createBufferStrategy(2);
+	}
 
 	public Graphics2D getGraphics(){
 		Window window = device.getFullScreenWindow();
